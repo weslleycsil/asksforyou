@@ -6,4 +6,4 @@ ENV PORT 3000
 
 RUN npm cache clear --force && npm install
 
-ENTRYPOINT ["npm", "start"]
+CMD [ "npm", "start" ]
