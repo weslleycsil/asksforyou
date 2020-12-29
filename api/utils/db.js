@@ -16,6 +16,7 @@ mongoose.connection.on('error', function(err){
 	logger.error('Erro ao tentar conectar ao BD: ', err);
 	process.exit(1)
 });
+
 mongoose.connection.on('connected', function(e){
 	logger.info(
 		`Conectado com sucesso a ${config.database.uri} MongoDB cluster em ${
