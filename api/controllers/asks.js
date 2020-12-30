@@ -1,11 +1,11 @@
-const asks = require('../models/asks');
+const Ask = require('../models/asks');
 const logger = require('../utils/logger');
 
 // Criação de nova pergunta
 exports.create = (req, res) => {
     var newAsk = new Ask(req.body);
     newAsk.save()
-    .then(Ask => {
+    .then(ask => {
         //console.log(req.body);
         res.status(200).send('Save Successful');
     })
@@ -18,10 +18,10 @@ exports.create = (req, res) => {
 
 // Listagem das perguntas
 exports.list = (req, res) => {
-    asks.find()
-    .then(Ask => {
+    Ask.find()
+    .then(ask => {
         //console.log(req.body);
-        res.json(asks);
+        res.json(ask);
     })
     .catch(err => {
         //console.log(err);
@@ -32,9 +32,9 @@ exports.list = (req, res) => {
 
 // Busca pelo uuid de uma pergunta
 exports.get = (req, res) => {
-    asks.find({uuid: req.params.uuid})
-    .then(Ask => {
-        res.json(Ask);
+    Ask.find({uuid: req.params.uuid})
+    .then(ask => {
+        res.json(ask);
     })
     .catch(err => {
         console.error(err);
