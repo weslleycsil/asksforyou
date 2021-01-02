@@ -10,7 +10,7 @@ router.get('/ask', asks.list);
 router.post('/ask', asks.create);
 
 router.get('/', (req, res) => {
-    res.send('Hello World!')
+    res.send('Hello World API!')
   })
 
 module.exports = router;

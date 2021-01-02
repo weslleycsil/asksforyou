@@ -10,12 +10,22 @@ var corsOptions = {
     methods: "GET,PUT,POST,DELETE",
     optionsSuccessStatus: 204
 };
-var main_routes = require('./routers/routes')
+
+
+// Configuração da view engine
+app.set('view engine', 'ejs');
+app.use(express.static('public'));
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 app.use(cors(corsOptions));
-app.use('/', main_routes);
+
+//rotas
+const apiRoute = require('./routers/api')
+const appRoute = require('./routers/app')
+
+app.use('/api', apiRoute);
+app.use('/', appRoute);
 
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`)
