@@ -3,6 +3,8 @@ var router = express.Router();
 
 var asks = require('../controllers/asks');
 
+router.get('/ask/random', asks.random);
+
 router.get('/ask/:uuid', asks.get);
 
 router.get('/ask', asks.list);
