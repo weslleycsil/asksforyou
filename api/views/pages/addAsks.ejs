@@ -1,0 +1,10 @@
+<%- contentFor('body') %>
+<div class="jumbotron text-center">
+  <h2>Inserir nova ASK<h2>
+  <form action="/api/ask" method="POST">
+    <input type="text" placeholder="Nivel" name="difficulty">
+    <input type="text" placeholder="Pergunta" name="question.text">
+    <input type="text" placeholder="Resposta" name="question.answer">
+    <button type="submit">Enviar</button>
+  </form>
+</div>
