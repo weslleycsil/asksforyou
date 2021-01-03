@@ -2,13 +2,14 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const Question = new Schema({
-    language: {Type:String},
-    text: {Type:String},
+    language: { type: String},
+    text: { type: String},
+    answer: { type: String},
 });
 
 const Ask = new Schema ({
     uuid: { type: String, unique: true },
-    revised: { type: Boolean },
+    revised: { type: Boolean, default: false },
     difficulty: { type: String },
     question: {type: Question},
 });
