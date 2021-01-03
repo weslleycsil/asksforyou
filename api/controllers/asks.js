@@ -1,16 +1,18 @@
 const Ask = require('../models/asks');
 const logger = require('../utils/logger');
+const { v1: uuidv1 } = require('uuid');
 
 // Criação de nova pergunta
 exports.create = (req, res) => {
     var newAsk = new Ask(req.body);
+    newAsk.uuid = uuidv1();
     newAsk.save()
     .then(ask => {
         //console.log(req.body);
         res.status(200).send('Save Successful');
     })
     .catch(err => {
-        //console.log(err);
+        console.log(err);
         res.status(500).send('Unable to save ask');
     });
 
