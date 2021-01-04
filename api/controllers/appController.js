@@ -1,8 +1,8 @@
-const Ask = require('../repositories/asks');
+const Asks = require('../repositories/asks');
 const logger = require('../utils/logger');
 
 exports.listAsks = (req,res) => {
-    Ask.getAll()
+    Asks.getAll()
     .then(asks =>{
         res.render('pages/listAsks', {asks: asks})
     })
@@ -17,3 +17,11 @@ exports.createAsk = (req,res) => {
 exports.index = (req,res) => {
     res.render('pages/home');
 }
+
+exports.getAsk = (req, res) => {
+    Asks.getByReview(true)
+    .then(asks => {
+        res.render('pages/getAsk', {ask: asks[((Math.random() * asks.length) | 0)]})
+    })
+    .catch( err => logger.error(err))
+};

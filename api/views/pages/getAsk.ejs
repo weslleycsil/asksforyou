@@ -1,0 +1,30 @@
+<%- contentFor('body') %>
+<div class="jumbotron text-center">
+    <h2>Geração Randomica da ASK<h2>
+        <% if(ask){ %>
+            <table border="1">
+                <thead>
+                    <tr>
+                    <td>UUID</td>
+                    <td>Nivel</td>
+                    <td>Revisão</td>
+                    <td>Pergunta</td>
+                    <td>Resposta</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><%= ask.uuid %></td>
+                        <td><%= ask.difficulty %></td>
+                        <td><%= ask.revised %></td>
+                        <td><%= ask.question.text %></td>
+                        <td><%= ask.question.answer %></td>
+                    </tr>
+                   
+                </tbody>
+            </table>
+          <% } else{ %>  
+            <h1>não foram encontrados registros ;-;</h1>
+         <% } %>
+    
+</div>

@@ -23,4 +23,7 @@ module.exports = new class AskRepository {
         return Ask.findOneAndRemove({uuid: reqUuid});
     }
 
+    getByReview(revised) {
+        return Ask.find({revised: revised});
+    }
 }

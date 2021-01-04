@@ -6,4 +6,6 @@ router.get('/', appCtrl.index)
 
 router.get('/newask', appCtrl.createAsk)
 router.get('/listasks', appCtrl.listAsks)
+router.get('/getask', appCtrl.getAsk)
+
 module.exports = router;

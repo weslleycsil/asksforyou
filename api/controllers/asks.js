@@ -47,12 +47,12 @@ exports.get = (req, res) => {
 
 // Atualizar dados de uma pergunta
 exports.put = (req, res) => {
-    Asks.update({uuid: req.params.uuid}, body)
+    Asks.update({uuid: req.params.uuid}, req.body)
     .then(ask => {
         res.json(ask);
     })
     .catch(err => {
-        //console.error(err);
+        console.error(err);
         res.status(422).send(err.errors);
     });
 };
@@ -72,12 +72,12 @@ exports.delete = (req, res) => {
 
 // Get randomico de uma pergunta
 exports.random = (req, res) => {
-    Asks.getAll()
+    Asks.getByReview(true)
     .then(asks => {
         res.json(asks[((Math.random() * asks.length) | 0)]);
     })
     .catch(err => {
         //console.log(err);
-        res.status(422).send('Unable to view asks');
+        res.status(422).send('Unable to view ask');
     });
 };

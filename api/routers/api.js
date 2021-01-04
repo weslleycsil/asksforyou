@@ -1,15 +1,17 @@
 var express = require('express');
 var router = express.Router();
 
-var asks = require('../controllers/asks');
+var Asks = require('../controllers/asks');
 
-router.get('/ask/random', asks.random);
+router.get('/ask/random', Asks.random);
 
-router.get('/ask/:uuid', asks.get);
+router.get('/ask/:uuid', Asks.get);
 
-router.get('/ask', asks.list);
+router.put('/ask/:uuid', Asks.put);
 
-router.post('/ask', asks.create);
+router.get('/ask', Asks.list);
+
+router.post('/ask', Asks.create);
 
 router.get('/', (req, res) => {
     res.send('Hello World API!')
