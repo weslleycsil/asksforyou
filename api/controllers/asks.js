@@ -47,7 +47,7 @@ exports.get = (req, res) => {
 
 // Atualizar dados de uma pergunta
 exports.put = (req, res) => {
-    Asks.update({uuid: req.params.uuid}, req.body)
+    Asks.update(req.params.uuid, req.body)
     .then(ask => {
         res.json(ask);
     })
@@ -59,7 +59,7 @@ exports.put = (req, res) => {
 
 // Deletar uma pergunta
 exports.delete = (req, res) => {
-    Asks.delete({uuid: req.params.uuid})
+    Asks.delete(req.params.uuid)
     .then(ask => {
         res.json(ask);
     })
