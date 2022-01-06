@@ -1,0 +1,28 @@
+<%- contentFor('body') %>
+<div class="jumbotron text-center">
+    <h2>Lista de ASKs<h2>
+    <table border="1">
+        <thead>
+            <tr>
+            <td>UUID</td>
+            <td>Nivel</td>
+            <td>Revisão</td>
+            <td>Idiomas</td>
+            </tr>
+        </thead>
+        <tbody>
+            <% asks.forEach(function(ask) { %>
+            <tr>
+                <td><a href="editask/<%= ask.uuid %>"><%= ask.uuid %></a></td>
+                <td><%= ask.difficulty %></td>
+                <td><%= ask.revised %></td>
+                <td>
+                    <% ask.questions.forEach(function(question) { %>
+                        <%= question.language %>
+                    <% }) %>
+                </td>
+            </tr>
+            <% }) %>
+        </tbody>
+    </table>
+</div>

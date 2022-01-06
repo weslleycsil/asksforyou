@@ -1,0 +1,16 @@
+<%- contentFor('body') %>
+<div class="jumbotron text-center">
+  <h2>Inserir nova ASK<h2>
+  <form action="/api/ask" method="POST">
+    <label for="dificuldade">Dificuldade: </label>
+    <select id="dificuldade" name="difficulty">
+      <option value="1">Fácil</option>
+      <option value="2">Intermediário</option>
+      <option value="3">Dificil</option>
+    </select>
+    <button type="submit">Enviar</button>
+  </form>
+</div>
+
+
+

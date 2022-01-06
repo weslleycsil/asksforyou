@@ -1,0 +1,46 @@
+{
+  "name": "asksforyou-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/weslleycsil/asksforyou.git"
+  },
+  "keywords": [
+    "questions"
+  ],
+  "author": "Weslley Silva",
+  "contributors": [
+    {
+      "name": "Weslley Silva",
+      "email": "weslleycsil@gmail.com",
+      "url": "https://infra.expert/"
+    },
+    {
+      "name": "Cleiton Marques",
+      "email": "cleitonmarquees@gmail.com"
+    }
+  ],
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/weslleycsil/asksforyou/issues"
+  },
+  "homepage": "https://github.com/weslleycsil/asksforyou#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.6"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "ejs": "^3.1.5",
+    "express": "^4.17.1",
+    "express-ejs-layouts": "^2.5.0",
+    "mongoose": "^5.11.8",
+    "uuid": "^8.3.2"
+  }
+}
