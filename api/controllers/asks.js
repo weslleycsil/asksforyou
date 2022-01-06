@@ -1,4 +1,5 @@
 const Ask = require('../models/asks');
+const Quest = require('../models/questions');
 const Asks = require('../repositories/asks');
 const logger = require('../utils/logger');
 const { v1: uuidv1 } = require('uuid');
@@ -53,6 +54,43 @@ exports.put = (req, res) => {
     })
     .catch(err => {
         console.error(err);
+        res.status(422).send(err.errors);
+    });
+};
+
+//adicionar perguntas com idiomas
+exports.addQuest = (req,res) => {
+    var quest = new Quest(req.body)
+    Asks.getByUUID(req.params.uuid)
+    .then(ask => {
+        let q = ask.questions.find(function(pergunta){
+            return pergunta.language === quest.language
+        })
+        console.log(q)
+        if(!q){
+            ask.questions.push(quest);
+            ask.save();
+            console.log(ask);
+            res.status(200).send('Save Successful');
+        } else {
+            console.log('Idioma existente')
+            throw new Error('Idioma existente');
+        }
+    })
+    .catch(err => {
+        res.status(422).send(err.errors);
+    });
+};
+
+exports.removeQuest = (req,res) => {
+    Asks.getByUUID(req.params.uuid)
+    .then(ask => {
+        ask.questions.id(req.params.idquest).remove();
+        ask.save();
+        console.log(ask);
+        res.status(200).send('Remove Successful');
+    })
+    .catch(err => {
         res.status(422).send(err.errors);
     });
 };

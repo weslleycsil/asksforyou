@@ -1,0 +1,75 @@
+<%- contentFor('body') %>
+<div class="jumbotron text-center">
+    <% if(ask){ %>
+        <h2>Editar ASK - <%= ask.uuid %><h2>
+        <form action="/api/ask" method="PUT">
+            <label for="dificuldade">Dificuldade: </label>
+            <select id="dificuldade" name="difficulty">
+                <% if (ask.difficulty == 1) {%>
+                    <option value="1" selected>Fácil</option>
+                <% } else{ %>
+                    <option value="1">Fácil</option>
+                <% } %>
+                <% if (ask.difficulty == 2) {%>
+                    <option value="2" selected>Intermediário</option>
+                <% } else{ %>
+                    <option value="2">Intermediário</option>
+                <% } %>
+                <% if (ask.difficulty == 3) {%>
+                    <option value="3" selected>Dificil</option>
+                <% } else{ %>
+                    <option value="3">Dificil</option>
+                <% } %>
+            </select>
+            <label for="revisao">Revisado: </label>
+            <select id="revisao" name="revised">
+                <% if (ask.revised) {%>
+                    <option value="true" selected>Aceito</option>
+                <% } else{ %>
+                    <option value="true">Aceito</option>
+                <% } %>
+                <% if (!ask.revised) {%>
+                    <option value="false" selected>Falso</option>
+                <% } else{ %>
+                    <option value="false">Falso</option>
+                <% } %>
+            </select>
+            <button type="submit">Enviar</button>
+        </form>
+        <h3>Idiomas</h3>
+        <table border="1">
+            <thead>
+                <tr>
+                <td>ID</td>
+                <td>Idioma</td>
+                <td>Pergunta</td>
+                <td>Resposta</td>
+                </tr>
+            </thead>
+            <tbody>
+                <% ask.questions.forEach(function(question) { %>
+                <tr>
+                    <td><%= question._id %></td>
+                    <td><%= question.language %></td>
+                    <td><%= question.text %></td>
+                    <td><%= question.answer %></td>
+                </tr>
+                <% }) %>
+            </tbody>
+        </table>
+        <h3>Adicionar Idioma</h3>
+        <form action="/api/ask/<%= ask.uuid %>/addQuest" method="POST">
+            <label for="idioma">Idioma: </label>
+            <select id="idioma" name="language">
+                <option value="pt-br">Português Brasil</option>
+                <option value="en">Inglês</option>
+                <option value="pt">Português</option>
+            </select>
+            <input type="text" placeholder="Pergunta" name="text">
+            <input type="text" placeholder="Resposta" name="answer">
+            <button type="submit">Enviar</button>
+        </form>
+    <% } else{ %>
+        <h1>não foram encontrados registros ;-;</h1>
+    <% } %>
+</div>

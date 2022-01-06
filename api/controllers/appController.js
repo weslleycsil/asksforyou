@@ -16,7 +16,16 @@ exports.createAsk = (req,res) => {
 
 exports.index = (req,res) => {
     res.render('pages/home');
-}
+};
+
+exports.editAsk = (req,res) => {
+    Asks.getByUUID(req.params.uuid)
+    .then(ask =>{
+        console.log(ask)
+        res.render('pages/editAsk', {ask: ask});
+    })
+    .catch( err => logger.error(err))
+};
 
 exports.getAsk = (req, res) => {
     Asks.getByReview(true)

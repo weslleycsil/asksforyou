@@ -8,7 +8,7 @@ module.exports = new class AskRepository {
     }
 
     getByUUID(reqUuid) {
-        return Ask.find({uuid: reqUuid});
+        return Ask.findOne({uuid: reqUuid});
     }
 
     create(ask) {

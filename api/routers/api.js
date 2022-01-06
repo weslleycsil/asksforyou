@@ -5,7 +5,13 @@ var Asks = require('../controllers/asks');
 
 router.get('/ask/random', Asks.random);
 
+router.post('/ask/:uuid/addQuest', Asks.addQuest);
+
+router.delete('/ask/:uuid/removeQuest/:idquest', Asks.removeQuest);
+
 router.get('/ask/:uuid', Asks.get);
+
+router.delete('/ask/:uuid',Asks.delete);
 
 router.put('/ask/:uuid', Asks.put);
 

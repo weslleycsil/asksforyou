@@ -11,7 +11,7 @@ const Ask = new Schema ({
     uuid: { type: String, unique: true },
     revised: { type: Boolean, default: false },
     difficulty: { type: String },
-    question: {type: Question},
+    questions: { type: [Question] },
 });
 
 module.exports = mongoose.model('Ask', Ask)

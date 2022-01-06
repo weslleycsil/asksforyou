@@ -7,18 +7,20 @@
             <td>UUID</td>
             <td>Nivel</td>
             <td>Revisão</td>
-            <td>Pergunta</td>
-            <td>Resposta</td>
+            <td>Idiomas</td>
             </tr>
         </thead>
         <tbody>
             <% asks.forEach(function(ask) { %>
             <tr>
-                <td><%= ask.uuid %></td>
+                <td><a href="editask/<%= ask.uuid %>"><%= ask.uuid %></a></td>
                 <td><%= ask.difficulty %></td>
                 <td><%= ask.revised %></td>
-                <td><%= ask.question.text %></td>
-                <td><%= ask.question.answer %></td>
+                <td>
+                    <% ask.questions.forEach(function(question) { %>
+                        <%= question.language %>
+                    <% }) %>
+                </td>
             </tr>
             <% }) %>
         </tbody>

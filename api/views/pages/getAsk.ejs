@@ -1,28 +1,25 @@
 <%- contentFor('body') %>
 <div class="jumbotron text-center">
-    <h2>Geração Randomica da ASK<h2>
+    <h2>ASK - <%= ask.uuid %><h2>
         <% if(ask){ %>
-            <table border="1">
-                <thead>
-                    <tr>
-                    <td>UUID</td>
-                    <td>Nivel</td>
-                    <td>Revisão</td>
-                    <td>Pergunta</td>
-                    <td>Resposta</td>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><%= ask.uuid %></td>
-                        <td><%= ask.difficulty %></td>
-                        <td><%= ask.revised %></td>
-                        <td><%= ask.question.text %></td>
-                        <td><%= ask.question.answer %></td>
-                    </tr>
-                   
-                </tbody>
-            </table>
+            <h3>Dificuldade - <%= ask.difficulty %></h3>
+            <div width="728">
+                <br>		
+                
+                <% ask.questions.forEach(function(question) { 
+                    if(question.language == 'en'){ %>
+                    <p class="question"><b>Question: </b><i><%= question.text %></i></p>
+                    <div id="answerLayer" style="visibility:hidden">
+                    <p><b>Answer: </b><%= question.answer %></p>
+                <% }}) %>
+
+                </div>
+                <div id="nextQuestion" style="display:none">
+                <p><a href="#" onClick="window.location.href = sURL;"><b>Next question</b></a></p>
+                </div>
+                <div id="showPrompt" style="display:''">
+                <p><a href="javascript:ShowLayer('answerLayer','visible');displayLayer('showPrompt','none');displayLayer('nextQuestion','');"><b>Reveal answer</b></a></p>
+            </div>
           <% } else{ %>  
             <h1>não foram encontrados registros ;-;</h1>
          <% } %>
