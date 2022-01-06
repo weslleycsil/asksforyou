@@ -26,4 +26,8 @@ module.exports = new class AskRepository {
     getByReview(revised) {
         return Ask.find({revised: revised});
     }
+
+    revise(reqUuid, revised){
+        return Ask.findOneAndUpdate({uuid: reqUuid}, {revised: revised}, { new: true});
+    }
 }

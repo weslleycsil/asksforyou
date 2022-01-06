@@ -11,7 +11,8 @@ exports.create = (req, res) => {
     newAsk.save()
     .then(ask => {
         //console.log(req.body);
-        res.status(200).send('Save Successful');
+        res.json(ask);
+        //res.status(200).send('Save Successful');
     })
     .catch(err => {
         console.log(err);
@@ -58,6 +59,16 @@ exports.put = (req, res) => {
     });
 };
 
+exports.revised = (req, res) => {
+    Asks.revise(req.params.uuid, req.params.status)
+    .then(ask => {
+        res.json(ask);
+    })
+    .catch(err => {
+        res.status(422).send(err.errors);
+    });
+};
+
 //adicionar perguntas com idiomas
 exports.addQuest = (req,res) => {
     var quest = new Quest(req.body)
@@ -70,10 +81,8 @@ exports.addQuest = (req,res) => {
         if(!q){
             ask.questions.push(quest);
             ask.save();
-            console.log(ask);
             res.status(200).send('Save Successful');
         } else {
-            console.log('Idioma existente')
             throw new Error('Idioma existente');
         }
     })
@@ -87,7 +96,6 @@ exports.removeQuest = (req,res) => {
     .then(ask => {
         ask.questions.id(req.params.idquest).remove();
         ask.save();
-        console.log(ask);
         res.status(200).send('Remove Successful');
     })
     .catch(err => {
