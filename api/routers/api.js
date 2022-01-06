@@ -9,6 +9,8 @@ router.post('/ask/:uuid/addQuest', Asks.addQuest);
 
 router.delete('/ask/:uuid/removeQuest/:idquest', Asks.removeQuest);
 
+router.get('/ask/:uuid/revised/:status', Asks.revised);
+
 router.get('/ask/:uuid', Asks.get);
 
 router.delete('/ask/:uuid',Asks.delete);

@@ -1,0 +1,50 @@
+[
+    {
+        "revised": true,
+        "difficulty": "1",
+        "questions": [
+            {
+                "language": "en",
+                "text": "What valid host range is the IP address 192.168.207.215/27 a part of?",
+                "answer": "192.168.207.193 through to 192.168.207.222"
+            },
+            {
+                "language": "pt-br",
+                "text": "Qual é o intervalo válido para hosts que o endereço IP 192.168.207.215/27 faz parte?",
+                "answer": "192.168.207.193 até 192.168.207.222"
+            }
+        ]
+    },
+    {
+        "revised": true,
+        "difficulty": "1",
+        "questions": [
+            {
+                "language": "en",
+                "text": "What is the broadcast address of the network 192.168.187.64/27?",
+                "answer": "192.168.187.95"
+            },
+            {
+                "language": "pt-br",
+                "text": "Qual é o endereço de broadcast da rede 192.168.187.64/27?",
+                "answer": "192.168.187.95"
+            }
+        ]
+    },
+    {
+        "revised": false,
+        "difficulty": "1",
+        "questions": [
+            {
+                "language": "en",
+                "text": "What is the first valid host on the subnetwork that the node 172.24.11.217/28 belongs to?",
+                "answer": "172.24.11.209"
+            },
+            {
+                "language": "pt-br",
+                "text": "Qual é o primeiro host válido na subrede que o host 172.24.11.217/28 pertence?",
+                "answer": "172.24.11.209"
+            }
+        ]
+    }
+]
