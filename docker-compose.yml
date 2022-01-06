@@ -1,6 +1,6 @@
 version: '3'
 services:
-  app:
+  api:
     build: ./api
     command: /usr/src/app/node_modules/.bin/nodemon index.js
     ports:
@@ -12,6 +12,15 @@ services:
     volumes:
       - "./api/:/usr/src/app"
       - "reserved:/usr/src/app/node_modules"
+  app:
+    build: ./app
+    ports:
+      - 8080:80
+    networks: 
+      - backend
+    volumes:
+      - "./app/dist:/usr/share/nginx/html"
+
   database:
     image: "mongo" 
     #ports:
