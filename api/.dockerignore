@@ -5,6 +5,9 @@
 # Docker
 Dockerfile
 docker-compose.yml
+.dockerignore
 
 # NPM dependencies
 node_modules
+node_modules
+npm-debug.log
