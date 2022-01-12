@@ -1,50 +1,639 @@
-[
-    {
-        "revised": true,
-        "difficulty": "1",
-        "questions": [
-            {
-                "language": "en",
-                "text": "What valid host range is the IP address 192.168.207.215/27 a part of?",
-                "answer": "192.168.207.193 through to 192.168.207.222"
-            },
-            {
-                "language": "pt-br",
-                "text": "Qual é o intervalo válido para hosts que o endereço IP 192.168.207.215/27 faz parte?",
-                "answer": "192.168.207.193 até 192.168.207.222"
-            }
-        ]
-    },
-    {
-        "revised": true,
-        "difficulty": "1",
-        "questions": [
-            {
-                "language": "en",
-                "text": "What is the broadcast address of the network 192.168.187.64/27?",
-                "answer": "192.168.187.95"
-            },
-            {
-                "language": "pt-br",
-                "text": "Qual é o endereço de broadcast da rede 192.168.187.64/27?",
-                "answer": "192.168.187.95"
-            }
-        ]
-    },
-    {
-        "revised": false,
-        "difficulty": "1",
-        "questions": [
-            {
-                "language": "en",
-                "text": "What is the first valid host on the subnetwork that the node 172.24.11.217/28 belongs to?",
-                "answer": "172.24.11.209"
-            },
-            {
-                "language": "pt-br",
-                "text": "Qual é o primeiro host válido na subrede que o host 172.24.11.217/28 pertence?",
-                "answer": "172.24.11.209"
-            }
-        ]
-    }
-]
+[{
+    "difficulty": "1",
+    "questions": [{
+        "text": "Qual é o intervalo válido para hosts que o endereço IP 192.168.207.215/27 faz parte?",
+        "answer": "192.168.207.193 até 192.168.207.222",
+        "language": "pt-br"
+    }, {
+        "text": "What valid host range is the IP address 192.168.207.215/27 a part of?",
+        "answer": "192.168.207.193 through to 192.168.207.222",
+        "language": "en"
+    }]
+}, {
+    "difficulty": "1",
+    "questions": [{
+        "text": "Qual é o endereço de broadcast da rede 192.168.187.64/27?\t",
+        "answer": "192.168.187.95",
+        "language": "pt-br"
+    }, {
+        "text": "What is the broadcast address of the network 192.168.187.64/27?\t",
+        "answer": "192.168.187.95",
+        "language": "en"
+    }]
+}, {
+    "difficulty": "1",
+    "questions": [{
+        "text": "Qual é o primeiro host válido na subrede que o host 172.24.11.217/28 pertence?",
+        "answer": "172.24.11.209",
+        "language": "pt-br"
+    }, {
+        "text": "What is the first valid host on the subnetwork that the node 172.24.11.217/28 belongs to?",
+        "answer": "172.24.11.209",
+        "language": "en"
+    }]
+}, {
+    "difficulty": "1",
+    "questions": [{
+        "text": "What is the first valid host on the subnetwork that the node 172.21.250.30 255.255.252.0 belongs to?",
+        "answer": "172.21.248.1",
+        "language": "en"
+    }, {
+        "text": "Qual é o primeiro host válido na subrede que o nó 172.21.250.30 255.255.252.0 pertence?",
+        "answer": "172.21.248.1",
+        "language": "pt-br"
+    }]
+}, {
+    "difficulty": "1",
+    "questions": [{
+        "language": "en",
+        "text": "Which subnet does host 172.16.223.218/28 belong to?",
+        "answer": "172.16.223.208"
+    }, {
+        "language": "pt-br",
+        "text": "A qual sub-rede o host 172.16.223.218/28 pertence?",
+        "answer": "172.16.223.208"
+    }]
+}, {
+    "difficulty": "1",
+    "questions": [{
+        "language": "en",
+        "text": "What is the last valid host on the subnetwork 172.17.201.192 255.255.255.240?",
+        "answer": "172.17.201.206"
+    }, {
+        "language": "pt-br",
+        "text": "Qual é o ultimo host válido na sub-rede 172.17.201.192 255.255.255.240?",
+        "answer": "172.17.201.206"
+    }]
+}, {
+    "difficulty": "1",
+    "questions": [{
+        "language": "en",
+        "text": "What is the last valid host on the subnetwork 172.29.19.0/25?",
+        "answer": "172.29.19.126"
+    }, {
+        "language": "pt-br",
+        "text": "Qual é o ultimo host válido na sub-rede 172.29.19.0/25?",
+        "answer": "172.29.19.126"
+    }]
+}, {
+    "difficulty": "1",
+    "questions": [{
+        "language": "en",
+        "text": "What is the first valid host on the subnetwork that the node 172.29.234.19 255.255.255.0 belongs to?",
+        "answer": "172.29.234.1"
+    }, {
+        "language": "pt-br",
+        "text": "Qual é o primeiro host válido na sub-rede a qual o nó 172.29.234.19 255.255.255.0 pertence?",
+        "answer": "172.29.234.1"
+    }]
+}, {
+    "difficulty": "1",
+    "questions": [{
+        "language": "en",
+        "text": "Which subnet does host 10.154.21.217 255.255.240.0 belong to?",
+        "answer": "10.154.16.0"
+    }, {
+        "language": "pt-br",
+        "text": "A qual sub-rede o host 10.154.21.217 255.255.240.0 pertence?",
+        "answer": "10.154.16.0"
+    }]
+}, {
+    "difficulty": "1",
+    "questions": [{
+        "language": "pt-br",
+        "text": "De qual intervalo de hosts válidos o endereço IP 172.31.15.165/27 faz parte?",
+        "answer": "172.31.15.161 até 172.31.15.190"
+    }, {
+        "language": "en",
+        "text": "What valid host range is the IP address 172.31.15.165/27 a part of?",
+        "answer": "172.31.15.161 through to 172.31.15.190"
+    }]
+}, {
+    "difficulty": "2",
+    "questions": [{
+        "language": "pt-br",
+        "text": "Você está projetando uma máscara de sub-rede para a rede 172.21.0.0. Você deseja 600 sub-redes com até 40 hosts em cada sub-rede. Qual máscara de sub-rede você deve usar?",
+        "answer": "255.255.255.192"
+    }, {
+        "language": "en",
+        "text": "You are designing a subnet mask for the 172.21.0.0 network. You want 600 subnets with up to 40 hosts on each subnet. What subnet mask should you use?",
+        "answer": "255.255.255.192"
+    }]
+}, {
+    "difficulty": "1",
+    "questions": [{
+        "language": "pt-br",
+        "text": "Qual é o endereço de broadcast da rede 172.25.24.0 255.255.252.0?",
+        "answer": "172.25.27.255"
+    }, {
+        "language": "en",
+        "text": "What is the broadcast address of the network 172.25.24.0 255.255.252.0?",
+        "answer": "172.25.27.255"
+    }]
+}, {
+    "difficulty": "1",
+    "questions": [{
+        "language": "en",
+        "text": "Which subnet does host 172.20.1.12 255.255.254.0 belong to?",
+        "answer": "172.20.0.0"
+    }, {
+        "language": "pt-br",
+        "text": "A qual sub-rede o host 172.20.1.12 255.255.254.0 pertence?",
+        "answer": "172.20.0.0"
+    }]
+}, {
+    "difficulty": "1",
+    "questions": [{
+        "language": "en",
+        "text": "What is the broadcast address of the network 172.29.47.144/28?",
+        "answer": "172.29.47.159"
+    }, {
+        "language": "pt-br",
+        "text": "Qual é o endereço de broadcast da rede 172.29.47.144/28?",
+        "answer": "172.29.47.159"
+    }]
+}, {
+    "difficulty": "1",
+    "questions": [{
+        "language": "en",
+        "text": "What valid host range is the IP address 172.25.70.199/24 a part of?",
+        "answer": "172.25.70.1 through to 172.25.70.254"
+    }, {
+        "language": "pt-br",
+        "text": "De qual intervalo de hosts válidos o endereço IP 172.25.70.199/24 faz parte?",
+        "answer": "172.25.70.1 até 172.25.70.254"
+    }]
+}, {
+    "difficulty": "1",
+    "questions": [{
+        "language": "en",
+        "text": "What valid host range is the IP address 172.21.52.17/25 a part of?",
+        "answer": "172.21.52.1 through to 172.21.52.126"
+    }, {
+        "language": "pt-br",
+        "text": "De qual intervalo de hosts válidos o endereço IP 172.21.52.17/25 faz parte?",
+        "answer": "172.21.52.1 até 172.21.52.126"
+    }]
+}, {
+    "difficulty": "3",
+    "questions": [{
+        "language": "en",
+        "text": "How many subnets and hosts per subnet can you get from the network 192.168.236.0 255.255.255.248?",
+        "answer": "32 subnets and 6 hosts"
+    }, {
+        "language": "pt-br",
+        "text": "Quantas sub-redes e hosts por sub-rede você pode obter da rede 192.168.236.0 255.255.255.248?",
+        "answer": "32 sub-redes e 6 hosts"
+    }]
+}, {
+    "difficulty": "3",
+    "questions": [{
+        "language": "en",
+        "text": "How many subnets and hosts per subnet can you get from the network 172.24.0.0 255.255.254.0?",
+        "answer": "128 subnets and 510 hosts"
+    }, {
+        "language": "pt-br",
+        "text": "Quantas sub-redes e hosts por sub-rede você pode obter da rede 172.24.0.0 255.255.254.0?",
+        "answer": "128 sub-redes e 510 hosts"
+    }]
+}, {
+    "difficulty": "1",
+    "questions": [{
+        "language": "pt-br",
+        "text": "Qual é o primeiro host válido na sub-rede a qual o nó 172.16.48.108 255.255.254.0 pertence?",
+        "answer": "172.16.48.1"
+    }, {
+        "language": "en",
+        "text": "What is the first valid host on the subnetwork that the node 172.16.48.108 255.255.254.0 belongs to?",
+        "answer": "172.16.48.1"
+    }]
+}, {
+    "difficulty": "1",
+    "questions": [{
+        "language": "en",
+        "text": "What is the last valid host on the subnetwork 172.28.111.128 255.255.255.128?",
+        "answer": "172.28.111.254"
+    }, {
+        "language": "pt-br",
+        "text": "Qual é o ultimo host válido na sub-rede 172.28.111.128 255.255.255.128?",
+        "answer": "172.28.111.254"
+    }]
+}, {
+    "difficulty": "1",
+    "questions": [{
+        "language": "pt-br",
+        "text": "Qual é o primeiro host válido na sub-rede a qual o nó 10.21.26.44/20 pertence?",
+        "answer": "10.21.16.1"
+    }, {
+        "language": "en",
+        "text": "What is the first valid host on the subnetwork that the node 10.21.26.44/20 belongs to?",
+        "answer": "10.21.16.1"
+    }]
+}, {
+    "difficulty": "1",
+    "questions": [{
+        "language": "pt-br",
+        "text": "Qual é o endereço de broadcast da rede 172.31.165.0 255.255.255.0?",
+        "answer": "172.31.165.255"
+    }, {
+        "language": "en",
+        "text": "What is the broadcast address of the network 172.31.165.0 255.255.255.0?",
+        "answer": "172.31.165.255"
+    }]
+}, {
+    "difficulty": "1",
+    "questions": [{
+        "language": "pt-br",
+        "text": "De qual intervalo de hosts válidos o endereço IP 172.26.111.210/23 faz parte?",
+        "answer": "172.26.110.1 até 172.26.111.254"
+    }, {
+        "language": "en",
+        "text": "What valid host range is the IP address 172.26.111.210/23 a part of?",
+        "answer": "172.26.110.1 through to 172.26.111.254"
+    }]
+}, {
+    "difficulty": "1",
+    "questions": [{
+        "language": "en",
+        "text": "What is the first valid host on the subnetwork that the node 192.168.5.16 255.255.255.192 belongs to?",
+        "answer": "192.168.5.1"
+    }, {
+        "language": "pt-br",
+        "text": "Qual é o primeiro host válido na sub-rede a qual o nó 192.168.5.16 255.255.255.192 pertence?",
+        "answer": "192.168.5.1"
+    }]
+}, {
+    "difficulty": "2",
+    "questions": [{
+        "language": "en",
+        "text": "You are designing a subnet mask for the 172.19.0.0 network. You want 600 subnets with up to 40 hosts on each subnet. What subnet mask should you use?",
+        "answer": "255.255.248.0"
+    }, {
+        "language": "pt-br",
+        "text": "Você está projetando uma máscara de sub-rede para a rede 172.19.0.0. Você deseja 28 sub-redes com até 1400 hosts em cada sub-rede. Qual máscara de sub-rede você deve usar?",
+        "answer": "255.255.248.0"
+    }]
+}, {
+    "difficulty": "1",
+    "questions": [{
+        "language": "en",
+        "text": "What is the broadcast address of the network 10.23.144.0/20?",
+        "answer": "10.23.159.255"
+    }, {
+        "language": "pt-br",
+        "text": "Qual é o endereço de broadcast da rede 10.23.144.0/20?",
+        "answer": "10.23.159.255"
+    }]
+}, {
+    "difficulty": "3",
+    "questions": [{
+        "language": "pt-br",
+        "text": "Quantas sub-redes e hosts por sub-rede você pode obter da rede 172.23.0.0 255.255.255.0?",
+        "answer": "256 sub-redes e 254 hosts"
+    }, {
+        "language": "en",
+        "text": "How many subnets and hosts per subnet can you get from the network 172.23.0.0 255.255.255.0?",
+        "answer": "256 subnets and 254 hosts"
+    }]
+}, {
+    "difficulty": "3",
+    "questions": [{
+        "language": "en",
+        "text": "How many subnets and hosts per subnet can you get from the network 10.0.0.0/20?",
+        "answer": "4096 subnets and 4094 hosts"
+    }, {
+        "language": "pt-br",
+        "text": "Quantas sub-redes e hosts por sub-rede você pode obter da rede 10.0.0.0/20?",
+        "answer": "4096 sub-redes e 4094 hosts"
+    }]
+}, {
+    "difficulty": "1",
+    "questions": [{
+        "language": "en",
+        "text": "What is the broadcast address of the network 192.168.220.216 255.255.255.248?",
+        "answer": "192.168.220.223"
+    }, {
+        "language": "pt-br",
+        "text": "Qual é o endereço de broadcast da rede 192.168.220.216 255.255.255.248?",
+        "answer": "192.168.220.223"
+    }]
+}, {
+    "difficulty": "1",
+    "questions": [{
+        "language": "en",
+        "text": "Which subnet does host 172.26.139.215/23 belong to?",
+        "answer": "172.26.138.0"
+    }, {
+        "language": "pt-br",
+        "text": "A qual sub-rede o host 172.26.139.215/23 pertence?",
+        "answer": "172.26.138.0"
+    }]
+}, {
+    "difficulty": "1",
+    "questions": [{
+        "language": "en",
+        "text": "What is the broadcast address of the network 172.24.170.0/23",
+        "answer": "172.24.171.255"
+    }, {
+        "language": "pt-br",
+        "text": "Qual é o endereço de broadcast da rede 172.24.170.0/23",
+        "answer": "172.24.171.255"
+    }]
+}, {
+    "difficulty": "1",
+    "questions": [{
+        "language": "en",
+        "text": "Which subnet does host 172.21.94.121 255.255.248.0 belong to?",
+        "answer": "172.21.88.0"
+    }, {
+        "language": "pt-br",
+        "text": "A qual sub-rede o host 172.21.94.121 255.255.248.0 pertence?",
+        "answer": "172.21.88.0"
+    }]
+}, {
+    "difficulty": "1",
+    "questions": [{
+        "language": "pt-br",
+        "text": "Qual é o endereço de broadcast da rede 172.18.224.0/20?",
+        "answer": "172.18.239.255"
+    }, {
+        "language": "en",
+        "text": "What is the broadcast address of the network 172.18.224.0/20?",
+        "answer": "172.18.239.255"
+    }]
+}, {
+    "difficulty": "3",
+    "questions": [{
+        "language": "pt-br",
+        "text": "Quantas sub-redes e hosts por sub-rede você pode obter da rede 172.28.0.0/28?",
+        "answer": "4096 sub-redes e 14 hosts"
+    }, {
+        "language": "en",
+        "text": "How many subnets and hosts per subnet can you get from the network 172.28.0.0/28?",
+        "answer": "4096 subnets and 14 hosts"
+    }]
+}, {
+    "difficulty": "1",
+    "questions": [{
+        "language": "en",
+        "text": "What is the broadcast address of the network 192.168.173.128 255.255.255.128?",
+        "answer": "192.168.173.255"
+    }, {
+        "language": "pt-br",
+        "text": "Qual é o endereço de broadcast da rede 192.168.173.128 255.255.255.128?",
+        "answer": "192.168.173.255"
+    }]
+}, {
+    "difficulty": "2",
+    "questions": [{
+        "language": "pt-br",
+        "text": "Você está projetando uma máscara de sub-rede para a rede 172.18.0.0. Você deseja 70 sub-redes com até 500 hosts em cada sub-rede. Qual máscara de sub-rede você deve usar?",
+        "answer": "255.255.254.0"
+    }, {
+        "language": "en",
+        "text": "You are designing a subnet mask for the 172.18.0.0 network. You want 70 subnets with up to 500 hosts on each subnet. What subnet mask should you use?",
+        "answer": "255.255.254.0"
+    }]
+}, {
+    "difficulty": "1",
+    "questions": [{
+        "language": "pt-br",
+        "text": "De qual intervalo de hosts válidos o endereço IP 10.169.205.236/20 faz parte?",
+        "answer": "10.169.192.1 até 10.169.207.254"
+    }, {
+        "language": "en",
+        "text": "What valid host range is the IP address 10.169.205.236/20 a part of?",
+        "answer": "10.169.192.1 through to 10.169.207.254"
+    }]
+}, {
+    "difficulty": "1",
+    "questions": [{
+        "language": "en",
+        "text": "What is the broadcast address of the network 10.19.176.0/20?",
+        "answer": "10.19.191.255"
+    }, {
+        "language": "pt-br",
+        "text": "Qual é o endereço de broadcast da rede 10.19.176.0/20?",
+        "answer": "10.19.191.255"
+    }]
+}, {
+    "difficulty": "1",
+    "questions": [{
+        "language": "en",
+        "text": "What is the last valid host on the subnetwork 172.26.182.0 255.255.255.0?",
+        "answer": "172.26.182.254"
+    }, {
+        "language": "pt-br",
+        "text": "Qual é o ultimo host válido na sub-rede 172.26.182.0 255.255.255.0?",
+        "answer": "172.26.182.254"
+    }]
+}, {
+    "difficulty": "1",
+    "questions": [{
+        "language": "en",
+        "text": "What is the last valid host on the subnetwork 172.29.11.0/24?",
+        "answer": "172.29.11.254"
+    }, {
+        "language": "pt-br",
+        "text": "Qual é o ultimo host válido na sub-rede 172.29.11.0/24?",
+        "answer": "172.29.11.254"
+    }]
+}, {
+    "difficulty": "1",
+    "questions": [{
+        "language": "pt-br",
+        "text": "Qual é o ultimo host válido na sub-rede 192.168.42.160/29?",
+        "answer": "192.168.42.166"
+    }, {
+        "language": "en",
+        "text": "What is the last valid host on the subnetwork 192.168.42.160/29?",
+        "answer": "192.168.42.166"
+    }]
+}, {
+    "difficulty": "1",
+    "questions": [{
+        "language": "pt-br",
+        "text": "Qual é o ultimo host válido na sub-rede 192.168.128.64 255.255.255.240?",
+        "answer": "192.168.128.78"
+    }, {
+        "language": "en",
+        "text": "What is the last valid host on the subnetwork 192.168.128.64 255.255.255.240?",
+        "answer": "192.168.128.78"
+    }]
+}, {
+    "difficulty": "3",
+    "questions": [{
+        "language": "en",
+        "text": "How many subnets and hosts per subnet can you get from the network 172.29.0.0/28?",
+        "answer": "4096 subnets and 14 hosts"
+    }, {
+        "language": "pt-br",
+        "text": "Quantas sub-redes e hosts por sub-rede você pode obter da rede 172.29.0.0/28?",
+        "answer": "4096 sub-redes e 14 hosts"
+    }]
+}, {
+    "difficulty": "3",
+    "questions": [{
+        "language": "pt-br",
+        "text": "Quantas sub-redes e hosts por sub-rede você pode obter da rede 172.22.0.0/26?",
+        "answer": "1024 sub-redes e 62 hosts"
+    }, {
+        "language": "en",
+        "text": "How many subnets and hosts per subnet can you get from the network 172.22.0.0/26?",
+        "answer": "1024 subnets and 62 hosts"
+    }]
+}, {
+    "difficulty": "1",
+    "questions": [{
+        "language": "en",
+        "text": "What is the broadcast address of the network 192.168.201.64 255.255.255.192?",
+        "answer": "192.168.201.127"
+    }, {
+        "language": "pt-br",
+        "text": "Qual é o endereço de broadcast da rede 192.168.201.64 255.255.255.192?",
+        "answer": "192.168.201.127"
+    }]
+}, {
+    "difficulty": "1",
+    "questions": [{
+        "language": "en",
+        "text": "Which subnet does host 172.16.65.112/21 belong to?",
+        "answer": "172.16.64.0"
+    }, {
+        "language": "pt-br",
+        "text": "A qual sub-rede o host 172.16.65.112/21 pertence?",
+        "answer": "172.16.64.0"
+    }]
+}, {
+    "difficulty": "3",
+    "questions": [{
+        "language": "pt-br",
+        "text": "Quantas sub-redes e hosts por sub-rede você pode obter da rede 172.18.0.0 255.255.255.0?",
+        "answer": "256 sub-redes e 254 hosts"
+    }, {
+        "language": "en",
+        "text": "How many subnets and hosts per subnet can you get from the network 172.18.0.0 255.255.255.0?",
+        "answer": "256 subnets and 254 hosts"
+    }]
+}, {
+    "difficulty": "1",
+    "questions": [{
+        "language": "en",
+        "text": "What is the last valid host on the subnetwork 172.17.118.0/23?",
+        "answer": "172.17.119.254"
+    }, {
+        "language": "pt-br",
+        "text": "Qual é o ultimo host válido na sub-rede 172.17.118.0/23?",
+        "answer": "172.17.119.254"
+    }]
+}, {
+    "difficulty": "3",
+    "questions": [{
+        "language": "pt-br",
+        "text": "Quantas sub-redes e hosts por sub-rede você pode obter da rede 172.18.0.0 255.255.255.0?",
+        "answer": "256 sub-redes e 254 hosts"
+    }, {
+        "language": "en",
+        "text": "How many subnets and hosts per subnet can you get from the network 172.18.0.0 255.255.255.0?",
+        "answer": "256 subnets and 254 hosts"
+    }]
+}, {
+    "difficulty": "1",
+    "questions": [{
+        "language": "en",
+        "text": "Which subnet does host 10.138.200.42/20 belong to?",
+        "answer": "10.138.192.0"
+    }, {
+        "language": "pt-br",
+        "text": "A qual sub-rede o host 10.138.200.42/20 pertence?",
+        "answer": "10.138.192.0"
+    }]
+}, {
+    "difficulty": "1",
+    "questions": [{
+        "language": "pt-br",
+        "text": "Qual é o endereço de broadcast da rede 172.21.113.144/28?",
+        "answer": "172.21.113.159"
+    }, {
+        "language": "en",
+        "text": "What is the broadcast address of the network 172.21.113.144/28?",
+        "answer": "172.21.113.159"
+    }]
+}, {
+    "difficulty": "1",
+    "questions": [{
+        "language": "pt-br",
+        "text": "Qual é o primeiro host válido na sub-rede a qual o nó 172.21.2.33/23 pertence?",
+        "answer": "172.21.2.1"
+    }, {
+        "language": "en",
+        "text": "What is the first valid host on the subnetwork that the node 172.21.2.33/23 belongs to?",
+        "answer": "172.21.2.1"
+    }]
+}, {
+    "difficulty": "3",
+    "questions": [{
+        "language": "pt-br",
+        "text": "Quantas sub-redes e hosts por sub-rede você pode obter da rede 172.28.0.0/26?",
+        "answer": "1024 sub-redes e 62 hosts"
+    }, {
+        "language": "en",
+        "text": "How many subnets and hosts per subnet can you get from the network 172.28.0.0/26?",
+        "answer": "1024 subnets and 62 hosts"
+    }]
+}, {
+    "difficulty": "3",
+    "questions": [{
+        "language": "en",
+        "text": "How many subnets and hosts per subnet can you get from the network 172.29.0.0/20?",
+        "answer": "16 subnets and 4094 hosts"
+    }, {
+        "language": "pt-br",
+        "text": "Quantas sub-redes e hosts por sub-rede você pode obter da rede 172.29.0.0/20?",
+        "answer": "16 sub-redes e 4094 hosts"
+    }]
+}, {
+    "difficulty": "1",
+    "questions": [{
+        "language": "pt-br",
+        "text": "Qual é o primeiro host válido na sub-rede a qual o nó 172.21.140.95 255.255.254.0 pertence?",
+        "answer": "172.21.140.1"
+    }, {
+        "language": "en",
+        "text": "What is the first valid host on the subnetwork that the node 172.21.140.95 255.255.254.0 belongs to?",
+        "answer": "172.21.140.1"
+    }]
+}, {
+    "difficulty": "3",
+    "questions": [{
+        "language": "en",
+        "text": "How many subnets and hosts per subnet can you get from the network 172.22.0.0/23?",
+        "answer": "128 subnets and 510 hosts"
+    }, {
+        "language": "pt-br",
+        "text": "Quantas sub-redes e hosts por sub-rede você pode obter da rede 172.22.0.0/23?",
+        "answer": "128 sub-redes e 510 hosts"
+    }]
+}, {
+    "difficulty": "1",
+    "questions": [{
+        "language": "en",
+        "text": "What valid host range is the IP address 172.25.254.149/23 a part of?",
+        "answer": "172.25.254.1 through to 172.25.255.254"
+    }, {
+        "language": "pt-br",
+        "text": "De qual intervalo de hosts válidos o endereço IP 172.25.254.149/23 faz parte?",
+        "answer": "172.25.254.1 até 172.25.255.254"
+    }]
+}, {
+    "difficulty": "1",
+    "questions": [{
+        "language": "pt-br",
+        "text": "Qual é o endereço de broadcast da rede 192.168.70.0/25?",
+        "answer": "192.168.70.127"
+    }, {
+        "language": "en",
+        "text": "What is the broadcast address of the network 192.168.70.0/25?",
+        "answer": "192.168.70.127"
+    }]
+}]
